@@ -1,6 +1,6 @@
-from numbers import Real
-
 __all__ = ["log_range"]
+
+from numbers import Real
 
 
 def join(sequence):

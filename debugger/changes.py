@@ -1,11 +1,11 @@
+__all__ = ["log_changes"]
+
 try:
-    from collections.abc import Sequence, Set, Mapping
+    from collections.abc import Mapping, Sequence, Set
     from itertools import zip_longest
 except ImportError:
-    from collections import Sequence, Set, Mapping
+    from collections import Mapping, Sequence, Set
     from itertools import izip_longest as zip_longest
-
-__all__ = ["log_changes"]
 
 
 def log_changes(callback, name, old_value, value, sentinel=None):

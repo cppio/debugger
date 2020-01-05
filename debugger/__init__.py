@@ -1,3 +1,5 @@
-from .debugger import Trace, trace
+__all__ = ["ScopedTrace", "Trace", "scoped_trace", "trace", "trace_with"]
 
-__all__ = ["Trace", "trace"]
+from .scoped import ScopedTrace, scoped_trace
+from .trace import Trace, trace
+from .util import trace_with

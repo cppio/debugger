@@ -1,7 +1,8 @@
 from __future__ import print_function
 
-from copy import deepcopy
-import sys
+__all__ = ["Trace", "trace"]
+
+import copy
 
 try:
     from time import perf_counter
@@ -10,11 +11,17 @@ except ImportError:
 
 from .changes import log_changes
 from .range import log_range
+from .util import trace_with
 
-__all__ = ["Trace", "trace"]
+
+def deepcopy(value):
+    try:
+        return copy.deepcopy(value)
+    except Exception:
+        return value
 
 
-class Trace:
+class Trace(object):
     def __init__(self):
         self.frames = {}
         self.values = {}
@@ -105,11 +112,7 @@ class Trace:
 
 
 def trace(func, *args, **kwds):
-    old_trace = sys.gettrace()
     trace = Trace()
-    try:
-        sys.settrace(trace)
-        return func(*args, **kwds)
-    finally:
-        sys.settrace(old_trace)
-        trace.report()
+    ret = trace_with(trace, func, *args, **kwds)
+    trace.report()
+    return ret
