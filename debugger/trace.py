@@ -1,17 +1,15 @@
-from __future__ import print_function
-
 __all__ = ["Trace", "trace"]
 
 import copy
+import json
 
 try:
     from time import perf_counter
 except ImportError:
     from time import clock as perf_counter
 
-from .changes import log_changes
-from .range import log_range
-from .util import trace_with
+from .output import print_output
+from .util import trace_with, val_diffs, val_range
 
 
 def deepcopy(value):
@@ -22,12 +20,14 @@ def deepcopy(value):
 
 
 class Trace(object):
-    def __init__(self):
+    def __init__(self, filename=None):
+        self.filename = filename
         self.frames = {}
         self.values = {}
         self.lines = {}
         self.begin = perf_counter()
         self.variables = {}
+        self.steps = []
 
     def store_frame(self, frame):
         now = perf_counter()
@@ -52,26 +52,23 @@ class Trace(object):
             total += now - before
             self.lines[lineno] = count, total
 
-            print(
-                "executed line {} {} time{}".format(
-                    lineno, count, "s" if count > 1 else ""
-                )
-            )
-            print("  total: {} secs".format(total))
-            print("  avg: {} secs".format(total / count))
+            diffs = []
+            step = {
+                "type": event,
+                "now": now,
+                "lineno": lineno,
+                "count": count,
+                "total": total,
+                "diffs": diffs,
+            }
+            self.steps.append(step)
 
             sentinel = object()
 
             for name, value in frame.f_locals.items():
                 old_value = locals.get(name, sentinel)
 
-                log_changes(
-                    lambda message: print("line {}:".format(lineno), message),
-                    name,
-                    old_value,
-                    value,
-                    sentinel,
-                )
+                diffs.extend(val_diffs(name, old_value, value, sentinel))
 
                 if old_value is not value and old_value != value:
                     self.values[frame].setdefault(name, []).append(
@@ -81,12 +78,19 @@ class Trace(object):
             if event == "return":
                 vars = self.variables.setdefault(frame.f_code.co_name, {})
 
+                frame_values = step["frame_values"] = []
+                step["code_name"] = frame.f_code.co_name
+
                 for name, values in self.values[frame].items():
-                    log_range(print, name, values, frame.f_code.co_name)
-
-                    for lineno, value in values:
-                        print("  set to {!r} on line {}".format(value, lineno))
-
+                    frame_values.append(
+                        {
+                            "name": name,
+                            "range": val_range(value for lineno, value in values),
+                            "values": [
+                                (lineno, repr(value)) for lineno, value in values
+                            ],
+                        }
+                    )
                     vars.setdefault(name, []).extend(values)
 
                 del self.frames[frame]
@@ -95,20 +99,34 @@ class Trace(object):
     def report(self):
         now = perf_counter()
 
-        print("total running time: {}".format(now - self.begin))
+        output = {"steps": self.steps, "running_time": now - self.begin}
 
-        for lineno, (count, total) in sorted(self.lines.items()):
-            print(
-                "line {} was run {} time{}".format(
-                    lineno, count, "s" if count > 1 else ""
-                )
-            )
+        lines = output["lines"] = []
+
+        lines.extend(
+            {"lineno": lineno, "count": count}
+            for lineno, (count, total) in sorted(self.lines.items())
+        )
+
+        vars = output["vars"] = []
 
         for function, variables in self.variables.items():
             for name, values in variables.items():
-                log_range(print, name, values, function)
-                print("  initial value: {!r}".format(values[0][1]))
-                print("  final value: {!r}".format(values[-1][1]))
+                vars.append(
+                    {
+                        "name": name,
+                        "range": val_range(value for lineno, value in values),
+                        "function": function,
+                        "initial": repr(values[0][1]),
+                        "final": repr(values[-1][1]),
+                    }
+                )
+
+        if self.filename is None:
+            print_output(output)
+        else:
+            with open(self.filename + ".json", "w") as file:
+                json.dump(output, file)
 
 
 def trace(func, *args, **kwds):

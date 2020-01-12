@@ -1,3 +1,4 @@
+import json
 import os.path
 import runpy
 import sys
@@ -15,7 +16,15 @@ def main(file, function=None):
             # Python 2 workaround
             module[function].__globals__.update(module)
 
-            trace(module[function])
+            scoped_trace(file, module[function])
+    elif file.endswith(".json"):
+        if function is not None:
+            return "Function cannot be given with output log"
+
+        with open(file) as output:
+            output = json.load(output)
+
+        print_output(output)
     else:
         return "Unknown filetype"
 
@@ -26,11 +35,11 @@ if __name__ == "__main__":
     parser = ArgumentParser(
         __package__, description="Traces the execution of a python program"
     )
-    parser.add_argument("file", help="The program to execute")
+    parser.add_argument("file", help="The program to execute or the output log to view")
     parser.add_argument(
         "function",
         nargs="?",
-        help="The function to trace. This function must able to be called with no arguments. If missing, the program will be called as '__main__' and all function calls will be traced.",
+        help="The function to trace. This function must able to be called with no arguments. If missing, the program will be called as '__main__' and all function calls will be traced. Not valid if viewing an output log",
     )
 
     args = parser.parse_args()

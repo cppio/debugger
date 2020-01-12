@@ -10,18 +10,17 @@ class ScopedTrace(Trace):
         self.scope = scope
 
     def __call__(self, frame, event, arg):
-        f = frame.f_back
-        while f:
-            if f.f_code.co_filename == self.scope:
-                return super(ScopedTrace, self).__call__(frame, event, arg)
-
-            f = f.f_back
+        if (
+            frame.f_code.co_filename == self.scope
+            and frame.f_code.co_name != "<module>"
+        ):
+            return super(ScopedTrace, self).__call__(frame, event, arg)
 
         return self
 
 
 def scoped_trace(scope, func, *args, **kwds):
-    scoped_trace = ScopedTrace(scope)
+    scoped_trace = ScopedTrace(scope, scope)
     ret = trace_with(scoped_trace, func, *args, **kwds)
     scoped_trace.report()
     return ret
