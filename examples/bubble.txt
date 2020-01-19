@@ -1,0 +1,45 @@
+line 9: j set to 4
+line 11: k set to 0
+line 12: i set to 0
+line 14: l[0] changed from 4 to 3
+line 14: l[1] changed from 3 to 4
+line 12: i changed from 0 to 1
+line 14: l[1] changed from 4 to 2
+line 14: l[2] changed from 2 to 4
+line 15: k changed from 0 to 1
+line 12: i changed from 1 to 2
+line 14: l[2] changed from 4 to 1
+line 14: l[3] changed from 1 to 4
+line 15: k changed from 1 to 2
+line 12: i changed from 2 to 3
+line 14: l[3] changed from 4 to 0
+line 14: l[4] changed from 0 to 4
+line 15: k changed from 2 to 3
+line 16: j changed from 4 to 3
+line 11: k changed from 3 to 0
+line 12: i changed from 3 to 0
+line 14: l[0] changed from 3 to 2
+line 14: l[1] changed from 2 to 3
+line 12: i changed from 0 to 1
+line 14: l[1] changed from 3 to 1
+line 14: l[2] changed from 1 to 3
+line 15: k changed from 0 to 1
+line 12: i changed from 1 to 2
+line 14: l[2] changed from 3 to 0
+line 14: l[3] changed from 0 to 3
+line 15: k changed from 1 to 2
+line 16: j changed from 3 to 2
+line 11: k changed from 2 to 0
+line 12: i changed from 2 to 0
+line 14: l[0] changed from 2 to 1
+line 14: l[1] changed from 1 to 2
+line 12: i changed from 0 to 1
+line 14: l[1] changed from 2 to 0
+line 14: l[2] changed from 0 to 2
+line 15: k changed from 0 to 1
+line 16: j changed from 2 to 1
+line 11: k changed from 1 to 0
+line 12: i changed from 1 to 0
+line 14: l[0] changed from 1 to 0
+line 14: l[1] changed from 0 to 1
+line 16: j changed from 1 to 0

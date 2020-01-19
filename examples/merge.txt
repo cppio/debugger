@@ -1,0 +1,44 @@
+line 21: middle set to 3
+line 21: middle set to 2
+line 21: middle set to 1
+line 26: r set to [3]
+line 28: right changed from 2 to 1
+line 31: middle changed from 1 to 0
+line 32: l[1] changed from 3 to 4
+line 35: l[0] changed from 4 to 3
+line 23: l[0] changed from 4 to 3
+line 23: l[1] changed from 3 to 4
+line 26: r set to [2]
+line 28: right changed from 3 to 2
+line 31: middle changed from 2 to 1
+line 32: l[2] changed from 2 to 4
+line 28: right changed from 2 to 1
+line 31: middle changed from 1 to 0
+line 32: l[1] changed from 4 to 3
+line 35: l[0] changed from 3 to 2
+line 23: l[0] changed from 4 to 2
+line 23: l[2] changed from 2 to 4
+line 21: middle set to 4
+line 26: r set to [0]
+line 28: right changed from 5 to 4
+line 31: middle changed from 4 to 3
+line 32: l[4] changed from 0 to 1
+line 35: l[3] changed from 1 to 0
+line 24: l[3] changed from 1 to 0
+line 24: l[4] changed from 0 to 1
+line 26: r set to [0, 1]
+line 28: right changed from 5 to 4
+line 31: middle changed from 3 to 2
+line 32: l[4] changed from 1 to 4
+line 28: right changed from 4 to 3
+line 31: middle changed from 2 to 1
+line 32: l[3] changed from 0 to 3
+line 28: right changed from 3 to 2
+line 31: middle changed from 1 to 0
+line 32: l[2] changed from 4 to 2
+line 35: l[0] changed from 2 to 0
+line 35: l[1] changed from 3 to 1
+line 42: l[0] changed from 4 to 0
+line 42: l[1] changed from 3 to 1
+line 42: l[3] changed from 1 to 3
+line 42: l[4] changed from 0 to 4

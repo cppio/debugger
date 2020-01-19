@@ -1,0 +1,24 @@
+line 62: j set to 3
+line 64: i set to 3
+line 65: x set to 1
+line 67: l[3] changed from 1 to 4
+line 68: i changed from 3 to 0
+line 69: l[0] changed from 4 to 1
+line 64: i changed from 0 to 4
+line 65: x changed from 1 to 0
+line 67: l[4] changed from 0 to 3
+line 68: i changed from 4 to 1
+line 69: l[1] changed from 3 to 0
+line 72: j changed from 3 to 1
+line 67: l[1] changed from 0 to 1
+line 68: i changed from 1 to 0
+line 69: l[0] changed from 1 to 0
+line 64: i changed from 0 to 2
+line 65: x changed from 0 to 2
+line 64: i changed from 2 to 3
+line 65: x changed from 2 to 4
+line 64: i changed from 3 to 4
+line 65: x changed from 4 to 3
+line 67: l[4] changed from 3 to 4
+line 68: i changed from 4 to 3
+line 69: l[3] changed from 4 to 3

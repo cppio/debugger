@@ -35,17 +35,20 @@ def range_to_str(range):
     return types
 
 
-def print_step(step):
+def print_step(step, timing=False, report=True):
     lineno, count, total = step["lineno"], step["count"], step["total"]
 
-    print("executed line {} {} time{}".format(lineno, count, "s" if count > 1 else ""))
-    print("  total: {} secs".format(total))
-    print("  avg: {} secs".format(total / count))
+    if timing:
+        print(
+            "executed line {} {} time{}".format(lineno, count, "s" if count > 1 else "")
+        )
+        print("  total: {} secs".format(total))
+        print("  avg: {} secs".format(total / count))
 
     for diff in step["diffs"]:
         print("line {}: {}".format(lineno, diff_to_str(diff)))
 
-    if step["type"] == "return":
+    if report and step["type"] == "return":
         code_name = step["code_name"]
 
         for frame_value in step["frame_values"]:
@@ -59,24 +62,26 @@ def print_step(step):
                 print("  set to {} on line {}".format(value, lineno))
 
 
-def print_output(output):
+def print_output(output, timing=False, report=True):
     for step in output["steps"]:
-        print_step(step)
+        print_step(step, timing=timing, report=report)
 
-    print("total running time: {}".format(output["running_time"]))
+    if timing:
+        print("total running time: {}".format(output["running_time"]))
 
-    for line in output["lines"]:
-        print(
-            "line {} was run {} time{}".format(
-                line["lineno"], line["count"], "s" if line["count"] > 1 else ""
+        for line in output["lines"]:
+            print(
+                "line {} was run {} time{}".format(
+                    line["lineno"], line["count"], "s" if line["count"] > 1 else ""
+                )
             )
-        )
 
-    for var in output["vars"]:
-        print(
-            "{}: {} in {}".format(
-                var["name"], range_to_str(var["range"]), var["function"],
+    if report:
+        for var in output["vars"]:
+            print(
+                "{}: {} in {}".format(
+                    var["name"], range_to_str(var["range"]), var["function"],
+                )
             )
-        )
-        print("  initial value: {}".format(var["initial"]))
-        print("  final value: {}".format(var["final"]))
+            print("  initial value: {}".format(var["initial"]))
+            print("  final value: {}".format(var["final"]))
