@@ -1,0 +1,40 @@
+line 39: visited set to set(['A'])
+line 40: to_visit set to deque(['A'])
+line 43: to_visit changed from deque(['A']) to deque([])
+line 46: neighbor set to 'B'
+line 48: visited added {'B'}
+line 49: to_visit changed from deque([]) to deque(['B'])
+line 46: neighbor changed from 'B' to 'C'
+line 48: visited added {'C'}
+line 49: to_visit changed from deque(['B']) to deque(['B', 'C'])
+line 46: neighbor changed from 'C' to 'E'
+line 48: visited added {'E'}
+line 49: to_visit changed from deque(['B', 'C']) to deque(['B', 'C', 'E'])
+line 43: to_visit changed from deque(['B', 'C', 'E']) to deque(['C', 'E'])
+line 43: vertex changed from 'A' to 'B'
+line 46: neighbor changed from 'E' to 'A'
+line 46: neighbor changed from 'A' to 'D'
+line 48: visited added {'D'}
+line 49: to_visit changed from deque(['C', 'E']) to deque(['C', 'E', 'D'])
+line 46: neighbor changed from 'D' to 'F'
+line 48: visited added {'F'}
+line 49: to_visit changed from deque(['C', 'E', 'D']) to deque(['C', 'E', 'D', 'F'])
+line 43: to_visit changed from deque(['C', 'E', 'D', 'F']) to deque(['E', 'D', 'F'])
+line 43: vertex changed from 'B' to 'C'
+line 46: neighbor changed from 'F' to 'A'
+line 46: neighbor changed from 'A' to 'G'
+line 48: visited added {'G'}
+line 49: to_visit changed from deque(['E', 'D', 'F']) to deque(['E', 'D', 'F', 'G'])
+line 43: to_visit changed from deque(['E', 'D', 'F', 'G']) to deque(['D', 'F', 'G'])
+line 43: vertex changed from 'C' to 'E'
+line 46: neighbor changed from 'G' to 'A'
+line 46: neighbor changed from 'A' to 'F'
+line 43: to_visit changed from deque(['D', 'F', 'G']) to deque(['F', 'G'])
+line 43: vertex changed from 'E' to 'D'
+line 46: neighbor changed from 'F' to 'B'
+line 43: to_visit changed from deque(['F', 'G']) to deque(['G'])
+line 43: vertex changed from 'D' to 'F'
+line 46: neighbor changed from 'B' to 'E'
+line 43: to_visit changed from deque(['G']) to deque([])
+line 43: vertex changed from 'F' to 'G'
+line 46: neighbor changed from 'E' to 'C'

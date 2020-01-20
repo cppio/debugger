@@ -1,0 +1,17 @@
+line 5: right set to 256
+line 5: left set to 0
+line 8: middle set to 128
+line 13: right changed from 256 to 128
+line 8: middle changed from 128 to 64
+line 11: left changed from 0 to 65
+line 8: middle changed from 64 to 96
+line 13: right changed from 128 to 96
+line 8: middle changed from 96 to 80
+line 11: left changed from 65 to 81
+line 8: middle changed from 80 to 88
+line 13: right changed from 96 to 88
+line 8: middle changed from 88 to 84
+line 11: left changed from 81 to 85
+line 8: middle changed from 84 to 86
+line 13: right changed from 88 to 86
+line 8: middle changed from 86 to 85

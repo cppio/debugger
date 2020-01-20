@@ -1,0 +1,54 @@
+line 13: ms set to [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+line 15: m set to [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+line 15: w set to 12
+line 15: v set to 4
+line 16: mi set to []
+line 17: ms[1] set to []
+line 19: j set to 0
+line 21: mi[0] set to 0
+line 21: ms[1][0] set to 0
+line 19: j changed from 0 to 1
+line 21: mi[1] set to 0
+line 21: ms[1][1] set to 0
+line 19: j changed from 1 to 2
+line 21: mi[2] set to 0
+line 21: ms[1][2] set to 0
+line 19: j changed from 2 to 3
+line 21: mi[3] set to 0
+line 21: ms[1][3] set to 0
+line 19: j changed from 3 to 4
+line 21: mi[4] set to 0
+line 21: ms[1][4] set to 0
+line 19: j changed from 4 to 5
+line 21: mi[5] set to 0
+line 21: ms[1][5] set to 0
+line 19: j changed from 5 to 6
+line 21: mi[6] set to 0
+line 21: ms[1][6] set to 0
+line 19: j changed from 6 to 7
+line 21: mi[7] set to 0
+line 21: ms[1][7] set to 0
+line 19: j changed from 7 to 8
+line 21: mi[8] set to 0
+line 21: ms[1][8] set to 0
+line 19: j changed from 8 to 9
+line 21: mi[9] set to 0
+line 21: ms[1][9] set to 0
+line 19: j changed from 9 to 10
+line 21: mi[10] set to 0
+line 21: ms[1][10] set to 0
+line 19: j changed from 10 to 11
+line 21: mi[11] set to 0
+line 21: ms[1][11] set to 0
+line 19: j changed from 11 to 12
+line 23: mi[12] set to 4
+line 23: ms[1][12] set to 4
+line 19: j changed from 12 to 13
+line 23: mi[13] set to 4
+line 23: ms[1][13] set to 4
+line 19: j changed from 13 to 14
+line 23: mi[14] set to 4
+line 23: ms[1][14] set to 4
+line 19: j changed from 14 to 15
+line 23: mi[15] set to 4
+line 23: ms[1][15] set to 4

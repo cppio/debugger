@@ -1,0 +1,31 @@
+line 21: visited set to set([])
+line 22: to_visit set to ['A']
+line 25: to_visit[0] was removed (was 'A')
+line 30: visited added {'A'}
+line 33: to_visit[0] set to 'E'
+line 33: to_visit[1] set to 'C'
+line 33: to_visit[2] set to 'B'
+line 25: to_visit[2] was removed (was 'B')
+line 25: vertex changed from 'A' to 'B'
+line 30: visited added {'B'}
+line 33: to_visit[2] set to 'F'
+line 33: to_visit[3] set to 'D'
+line 25: to_visit[3] was removed (was 'D')
+line 25: vertex changed from 'B' to 'D'
+line 30: visited added {'D'}
+line 25: to_visit[2] was removed (was 'F')
+line 25: vertex changed from 'D' to 'F'
+line 30: visited added {'F'}
+line 33: to_visit[2] set to 'E'
+line 25: to_visit[2] was removed (was 'E')
+line 25: vertex changed from 'F' to 'E'
+line 30: visited added {'E'}
+line 25: to_visit[1] was removed (was 'C')
+line 25: vertex changed from 'E' to 'C'
+line 30: visited added {'C'}
+line 33: to_visit[1] set to 'G'
+line 25: to_visit[1] was removed (was 'G')
+line 25: vertex changed from 'C' to 'G'
+line 30: visited added {'G'}
+line 25: to_visit[0] was removed (was 'E')
+line 25: vertex changed from 'G' to 'E'

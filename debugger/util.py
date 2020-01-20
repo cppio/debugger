@@ -32,7 +32,11 @@ def val_diffs(name, old_value, value, sentinel=None):
 
     sentinel = object()
 
-    if isinstance(old_value, Sequence) and isinstance(value, Sequence):
+    if (
+        isinstance(old_value, Sequence)
+        and isinstance(value, Sequence)
+        and not (isinstance(value, str) or isinstance(old_value, str))
+    ):
         diffs = []
 
         for n, (i, j) in enumerate(zip_longest(old_value, value, fillvalue=sentinel)):

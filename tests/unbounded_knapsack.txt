@@ -1,0 +1,181 @@
+line 2: ms set to [0]
+line 4: w set to 1
+line 6: vi set to 4
+line 6: wi set to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[1] set to 2
+line 4: w changed from 1 to 2
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[2] set to 4
+line 4: w changed from 2 to 3
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[3] set to 6
+line 4: w changed from 3 to 4
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[4] set to 10
+line 4: w changed from 4 to 5
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[5] set to 12
+line 4: w changed from 5 to 6
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[6] set to 14
+line 4: w changed from 6 to 7
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[7] set to 16
+line 4: w changed from 7 to 8
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[8] set to 20
+line 4: w changed from 8 to 9
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[9] set to 22
+line 4: w changed from 9 to 10
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[10] set to 24
+line 4: w changed from 10 to 11
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[11] set to 26
+line 4: w changed from 11 to 12
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[12] set to 30
+line 4: w changed from 12 to 13
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[13] set to 32
+line 4: w changed from 13 to 14
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[14] set to 34
+line 4: w changed from 14 to 15
+line 6: vi changed from 2 to 4
+line 6: wi changed from 2 to 12
+line 6: vi changed from 4 to 2
+line 6: wi changed from 12 to 1
+line 6: vi changed from 2 to 10
+line 6: wi changed from 1 to 4
+line 6: vi changed from 10 to 1
+line 6: wi changed from 4 to 1
+line 6: vi changed from 1 to 2
+line 6: wi changed from 1 to 2
+line 6: ms[15] set to 36
